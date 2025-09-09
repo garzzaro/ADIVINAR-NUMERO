@@ -11,7 +11,12 @@ Scanner scanner = new Scanner(System.in);
 System,out.println(x:"Introduce un número entre 1 y 10: ");
 while (adivinado == false){
     try{
-        numeroIntroducido =scanner.nextInt();
+    } catch (illegalArgumnentException e){
+        System.out.println(x:"El número debe estar entre 1 y 10. Intenta de nuevo: ");
+    }catch (Expection e){
+        System.out.println(x:"Por favor,Ingrese un número válido ");
+        scanner.next();
+    }
     if (numeroIntroducido == numeroAdivinar){
         System.out.println(x:"Adivinaste el numero }");
         adivinado = true;
