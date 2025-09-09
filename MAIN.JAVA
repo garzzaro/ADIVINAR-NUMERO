@@ -17,6 +17,10 @@ while (adivinado == false){
         System.out.println(x:"Por favor,Ingrese un número válido ");
         scanner.next();
     }
+    numeroIntroducido =scanner.nextInt();
+    if (numeroIntroducido < 1 || numeroIntroducido > 10) {
+        throw new IllegalArgumentException();
+    }
     if (numeroIntroducido == numeroAdivinar){
         System.out.println(x:"Adivinaste el numero }");
         adivinado = true;
