@@ -1,38 +1,34 @@
-Class Main {
-    public static void main(String[] args) {
-        System.out.println("Vamosacrear un programapara adiviar un número");
-}
-    
-private int numeroAdivinar =7; 
-private boolean adivinado = false;
-private int numeroIntroducido;
-Scanner scanner = new Scanner(System.in);
+import java.util.Scanner;
 
-System,out.println(x:"Introduce un número entre 1 y 10: ");
-while (adivinado == false){
-    try{
-    } catch (illegalArgumnentException e){
-        System.out.println(x:"El número debe estar entre 1 y 10. Intenta de nuevo: ");
-    }catch (Expection e){
-        System.out.println(x:"Por favor,Ingrese un número válido ");
-        scanner.next();
-    }
-    numeroIntroducido =scanner.nextInt();
-    if (numeroIntroducido < 1 || numeroIntroducido > 10) {
-        throw new IllegalArgumentException();
-    }
-    if (numeroIntroducido == numeroAdivinar){
-        System.out.println(x:"Adivinaste el numero }");
-        adivinado = true;
-    } else {
-        System.out.println(x:"No Adivinaste. Intenta de nuevo: ");
-    }
-    catch (Exeption e) {
-        System.out.println(x:"Por favor,Ingrese un número válido ");
-        scanner.next(); 
-    }
-        
-    }
+class MAIN {
+    public static void main(String[] args) {
+        System.out.println("Vamos a crear un prgramam para adivinar un numero");
     
-    
+    int numeroAdivinar = 5;
+    int numeroUsuario = 0;
+    boolean adivinado = false;
+
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Adivina el numero entre 1 y 10");
+        while(adivinado == false) {
+    try {
+        numeroUsuario = scanner.nextInt();
+         if (numeroUsuario < 1 || numeroUsuario > 10) {
+                throw new IllegalArgumentException();
+            }
+        if(numeroUsuario == numeroAdivinar) {
+            System.out.println("Ganaste, adivinaste el numero");
+            adivinado = true;
+        } else {
+            System.out.println("Incorrecto vuelve a intentarlo");
+        }
+    }catch(IllegalArgumentException e) {
+        System.out.println("El numero debe estar entre 1 y 10");
+    } 
+    catch(Exception e) {
+        System.out.println("Por favor ingresa un numero valido");
+        scanner.nextLine();
+    }
+    }
+    }
 }
