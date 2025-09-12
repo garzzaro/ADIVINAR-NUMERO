@@ -2,7 +2,7 @@ public class Jugador {
     private String nombre;
     private int puntaje;
 
-    public Jugador(String nombre) {
+    public Jugador(String nombre, String string) {
         this.nombre = nombre;
         this.puntaje = 0;
     }
@@ -17,5 +17,9 @@ public class Jugador {
 
     public void incrementarPuntaje(int puntos) {
         this.puntaje += puntos;
+    }
+
+    public String getPieza() {
+        return nombre.equals("Jugador 1") ? "X" : "O";
     }
 }
