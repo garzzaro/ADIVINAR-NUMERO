@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Connect4Controller.java juego = new Connect4Controller.java ();
+        Connect4Controller juego = new Connect4Controller (null, null);
 
         juego.jugar(0, 0);
         juego.jugar(1, 0);
