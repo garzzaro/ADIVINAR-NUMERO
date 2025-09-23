@@ -53,7 +53,7 @@ public class Main {
     
     private static void jugarPartida() {
         boolean partidaTerminada = false;
-        jugadorActual = jugador1; // Reiniciar turno
+        jugadorActual = jugador1; 
         
         while (!partidaTerminada) {
             tablero.mostrarTablero();
@@ -76,7 +76,7 @@ public class Main {
                         System.out.println("Empate");
                         partidaTerminada = true;
                     } else {
-                        // Cambiar turno
+                       
                         jugadorActual = (jugadorActual == jugador1) ? jugador2 : jugador1;
                     }
                 } else {
